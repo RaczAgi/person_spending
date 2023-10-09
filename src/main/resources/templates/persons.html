@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Persons_spending</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Birthplace</th>
+        <th>Birth_time</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tr th:each="person : ${persons}">
+        <td th:number="${person.getId()}"></td>
+        <td th:text="${person.getName()}"></td>
+        <td th:text="${person.getBirthplace()}"></td>
+        <td th:date="${#dates.format(person.getBirth_time(), 'yyyy-MM-dd')}"></td>
+        <td th:text="${person.getEmail()}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person_spending</title>
+</head>
+<body>
+<main>
+  <h1>Search Person</h1>
+</main>
+<table>
+
+  <form th:action="@{/searchPerson}" method="post">
+
+    <input type="number" class="form-control" placeholder="id" th:field="*{person.id}"/>
+
+
+
+    <button type="submit" >Search</button>
+  </form>
+
+</table>
+</body>
+</html>

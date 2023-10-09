@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Persons_spending</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Where_spent</th>
+        <th>Howmuch_spent</th>
+        <th>Person_id</th>
+
+    </tr>
+    </thead>
+    <tr th:each="spending : ${spendings}">
+        <td th:text="${spending.getId()}"></td>
+        <td th:text="${spending.getWhere_spent()}"></td>
+        <td th:text="${spending.getHowmuch_spent()}"></td>
+        <td th:text="${spending.getPerson()}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

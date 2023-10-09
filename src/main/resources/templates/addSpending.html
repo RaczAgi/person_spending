@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Persons_spending</title>
+</head>
+<body>
+
+<form th:action="@{/addSpending}" method="post">
+    <label> Where spent:
+        <input  th:field="*{newSpending.where_spent}" placeholder="" type="text" id="where_spent" title="where_spent">
+    </label>
+    <br>
+    <label> How much spent:
+        <input  th:field="*{newSpending.howmuch_spent}" placeholder="" type="number" id="howmuch_spent" title="howmuch_spent">
+    </label>
+    <br>
+    <label> Person:
+        <input  th:field="*{newSpending.person}" placeholder="" type="number" id="person" title="person">
+    </label>
+    <br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
